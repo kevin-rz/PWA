@@ -14,7 +14,7 @@ var req = new Request(url)
         <div>
           <h2>${data.meals[0].strMeal}</h2>
           <p>${data.meals[0].strCategory}</p>
-          <img src="${data.meals[0].strMealThumb}">
+          <img src="${data.meals[0].strMealThumb}"  style="height:200px;">
           <p>${data.meals[0].strInstructions}</p>
           <div style="padding: 10px;"><a href="${data.meals[0].strYoutube}" style="border-style: outset;" >Watch Youtube video Instructions</a></div>
         </div>`
