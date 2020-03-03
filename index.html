@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>PWA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="theme-color" content="#ffe4c4">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="shortcut icon" type="image/png" href="img/comida.png">
+<link rel="apple-touch-icon" href="img/comida.png">
+<link rel="apple-touch-startup-image" href="img/comida.png">
+<link rel="manifest" href="manifest.json">
+
+<link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+
+<div class="cont">
+        <img class="img" src="img/food.jpg">
+</div>
+
+<div class="navbar">
+  <a href="#" class="active">Home</a>
+  <a class='isDisabled '>Ingredients</a>
+  <a class='isDisabled '>Areas</a>
+  <a class="right isDisabled">Meals</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About The Meal DB</h2>
+    <div><img src="img/food2.jpeg" style="height:200px;"></div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>More</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div><img src="img/food2.jpg" style="height:200px; margin-bottom: 15px;"></div>
+    <div><img src="img/food3.jpg" style="height:200px;"></div>
+  </div>
+  <div class="main" style="background-color: #ffe4c4;">
+    <h1>The Meal DB</h1>
+    <h5>Modified: Dec 7, 2017</h5>
+    <h1>Random Meal</h1>
+    <div id='random' style="text-align: center; border-style: outset;"></div>
+    <br>
+    </div>
+</div>
+
+<script src="js/fetch.js"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(reg => console.log('Service worker ok', reg))
+    .catch(err => console.warn('Service worker error', err))
+}
+  </script>
+
+</body>
+</html>
